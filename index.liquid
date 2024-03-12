@@ -3,9 +3,11 @@ layout: layout.liquid
 title: Random Name Generator
 ---
 
-<h2>Click to see user's avatar!</h2>
+<h1 class="text-2xl tracking-wide">Click to see user's avatar!</h1>
 <div x-data="{userImg: $fetchjson('https://dummyjson.com/users/1', jsonItem='image')}">
+    <div class="flex items-center justify-center">
     <img alt="thumbOne" id="hiddenImg" x-bind:src="userImg" style="display:none;" />
+    </div>
 </div>
 <button class="object-center bg-purple-800 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-full border-black-1000" id="showImg">?</button>
 
@@ -13,7 +15,7 @@ title: Random Name Generator
 <script>
     function displayHTML(string) {
         const mainName = document.getElementById('userName');
-        mainName.innerHTML = `<h1 id="nameHead" class=tracking-wide></h1>`;
+        mainName.innerHTML = `<h1 id="nameHead" class="tracking-wider text-2xl"></h1>`;
         document.getElementById('nameHead').textContent = string;
     }
     fetch('https://dummyjson.com/users/1')
