@@ -1,0 +1,12 @@
+body {
+    font-family: Helvetica, sans-serif;
+    color: #a09bd2;
+    background: #c2c7de;
+    padding: 0 40px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 8em;
+    letter-spacing: -2px;
+}
