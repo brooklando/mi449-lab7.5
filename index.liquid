@@ -1,7 +1,18 @@
 ---
 layout: layout.liquid
-title: 11ty Boilerplate
+title: Random Name Generator
 ---
 
-<h1>Yet Another 11ty <strong>Boilerplate</strong></h1>
-<img alt="pine" src="/images/pine.png" width="50" />
+<h2>Click for a surprise!</h2>
+<div x-data="{userImg: $fetchjson('https://dummyjson.com/users/1', jsonItem='image')}">
+    <img alt="thumbOne" id="hiddenImg" x-bind:src="userImg" style="display:none;" />
+        <div x-data="{userImg: $fetchjson('https://dummyjson.com/users/1', jsonItem='firstName')}">
+</div>
+<button class="object-center bg-purple-800 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-full border-black-1000" id="showImg">?</button>
+<script>
+    const showImageButton = document.getElementById("showImg");
+    const oneImg = document.getElementById("hiddenImg"); 
+    showImageButton.addEventListener("click", () => { 
+        oneImg.style.display = "block"; 
+    });
+</script>

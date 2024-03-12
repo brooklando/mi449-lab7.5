@@ -1,5 +1,8 @@
-// The export statement makes these settings available to other files in 11ty
-module.exports = function(eleventyConfig) {
-  eleventyConfig.addPassthroughCopy("images");
-  eleventyConfig.addPassthroughCopy("styles");
-};
+function randomName() {
+  const names = ['Max', 'Malcolm', 'Mason', 'Macy', 'Marissa', 'Maurice', 'Mike', 'Madison', 'Melanie', 'Melon'];
+  return {
+    get name() {
+      return names[Math.floor(Math.random() * names.length)];
+    },
+  }
+}
