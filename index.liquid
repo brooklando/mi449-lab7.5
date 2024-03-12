@@ -1,6 +1,6 @@
 ---
 layout: layout.liquid
-title: Random Name Generator
+title: User Picture Display
 ---
 
 <h1 class="text-2xl tracking-wide">Click to see user's avatar!</h1>
@@ -9,13 +9,12 @@ title: Random Name Generator
     <img alt="thumbOne" id="hiddenImg" x-bind:src="userImg" style="display:none;" />
     </div>
 </div>
-<button class="object-center bg-purple-800 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-full border-black-1000" id="showImg">?</button>
+<button class="object-center bg-red-700 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded-full border-black-1000" id="showImg">Show me!</button>
 
-<div id="userName"></div>
 <script>
     function displayHTML(string) {
         const mainName = document.getElementById('userName');
-        mainName.innerHTML = `<h1 id="nameHead" class="tracking-wider text-2xl"></h1>`;
+        mainName.innerHTML = `<h1 id="nameHead" class="tracking-wider text-2xl text-red-700 not-italic hover:italic"></h1>`;
         document.getElementById('nameHead').textContent = string;
     }
     fetch('https://dummyjson.com/users/1')
